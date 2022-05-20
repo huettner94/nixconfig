@@ -37,6 +37,7 @@ in {
           ssh = "ssh-ident";
           scp = "ssh-ident";
         };
+        initExtra = "export GIT_SSH=ssh-ident";
       };
     };
   };
