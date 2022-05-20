@@ -33,6 +33,10 @@ in {
           }
 
         ];
+        shellAliases = {
+          ssh = "ssh-ident";
+          scp = "ssh-ident";
+        };
       };
     };
   };

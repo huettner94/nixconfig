@@ -45,6 +45,7 @@
     encfs
     keepassxc
     nixfmt
+    ssh-ident
   ];
 
   fonts.fonts = with pkgs; [ meslo-lgs-nf ];
