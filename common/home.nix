@@ -40,5 +40,13 @@ in {
         initExtra = "export GIT_SSH=ssh-ident";
       };
     };
+
+    gtk = {
+      enable = true;
+      theme = {
+        name = "Materia-dark";
+        package = pkgs.materia-theme;
+      };
+    };
   };
 }
