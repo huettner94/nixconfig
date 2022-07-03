@@ -21,15 +21,16 @@
       xrdb "${
         pkgs.writeText "xrdb.conf" ''
           UXTerm*faceName:            MesloLGS NF
+          UXTerm*vt100.translations: #override \
+            Shift Ctrl <Key> C: copy-selection(CLIPBOARD) \n\
+            Shift Ctrl <Key> V: insert-selection(CLIPBOARD)
         ''
       }"
     '';
 
   };
- 
+
   programs.dconf.enable = true;
 
-  environment.systemPackages = with pkgs; [
-    lxappearance
-  ];
+  environment.systemPackages = with pkgs; [ lxappearance ];
 }
