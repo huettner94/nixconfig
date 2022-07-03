@@ -37,7 +37,10 @@ in {
           ssh = "ssh-ident";
           scp = "ssh-ident";
         };
-        initExtra = "export GIT_SSH=ssh-ident";
+        initExtra = ''
+          export GIT_SSH=ssh-ident
+          export PATH="/home/huettner94/.cargo/bin:$PATH"
+        '';
       };
     };
 
