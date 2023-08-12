@@ -2,7 +2,7 @@
 with pkgs;
 let
   home-manager = builtins.fetchTarball
-    "https://github.com/nix-community/home-manager/archive/release-21.11.tar.gz";
+    "https://github.com/nix-community/home-manager/archive/release-23.05.tar.gz";
 in {
   imports = [ (import "${home-manager}/nixos") ];
 
@@ -42,6 +42,10 @@ in {
           export PATH="/home/huettner94/.cargo/bin:$PATH"
         '';
       };
+    };
+
+    home = {
+      stateVersion = "23.05";
     };
 
     gtk = {
