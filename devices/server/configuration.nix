@@ -17,10 +17,7 @@
           prefixLength = 24;
         }];
     };
-    defaultGateway4 = {
-        address = "192.168.0.14";
-        interface = "enp0s31f6";
-    };
+    defaultGateway = "192.168.0.1";
     nameservers = [ "192.168.0.1" ];
   };
 
