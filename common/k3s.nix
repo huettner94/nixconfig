@@ -13,7 +13,9 @@
   services.k3s.enable = true;
   services.k3s.role = "server";
   services.k3s.extraFlags = toString [
-    # "--kubelet-arg=v=4" # Optionally add additional args to k3s
+    "--disable=servicelb"
+    "--disable=traefik"
+    "--disable=local-storage"
   ];
   environment.systemPackages = [ pkgs.k3s ];
 }
