@@ -8,7 +8,6 @@
     ../../common/k3s.nix
   ];
 
-
   fileSystems."/" = {
     label = "nixos";
     fsType = "ext4";
