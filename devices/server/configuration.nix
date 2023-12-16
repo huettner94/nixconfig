@@ -5,6 +5,7 @@
     ./hardware-configuration.nix
     ../../common/configuration.nix
     ../../common/server.nix
+    ../../common/k3s.nix
   ];
 
 
