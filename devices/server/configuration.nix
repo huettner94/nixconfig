@@ -7,6 +7,17 @@
     ../../common/server.nix
   ];
 
+
+  fileSystems."/" = {
+    label = "nixos";
+    fsType = "ext4";
+  };
+
+  fileSystems."/boot" = {
+    label = "boot";
+    fsType = "vfat";
+  };
+
   networking = {
     hostName = "serverle";
     interfaces = {
