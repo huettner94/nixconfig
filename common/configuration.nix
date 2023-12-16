@@ -18,13 +18,6 @@
     keyMap = "de";
   };
 
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-
-  # Enable sound.
-  sound.enable = true;
-  hardware.pulseaudio.enable = true;
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.huettner94 = {
     isNormalUser = true;
@@ -39,30 +32,7 @@
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
-    chromium
     git
-    zsh
-    encfs
-    keepassxc
-    nixfmt
-    ssh-ident
   ];
 
-  fonts.fonts = with pkgs; [ meslo-lgs-nf ];
-
-  nixpkgs.config.allowUnfree = true;
-
-  programs.zsh.enable = true;
-
-  services = {
-    # needed for store VSCode auth token 
-    gnome.gnome-keyring.enable = true;
-
-    syncthing = {
-      enable = true;
-      user = "huettner94";
-      dataDir = "/home/huettner94/.syncthing/data";
-      configDir = "/home/huettner94/.syncthing/config";
-    };
-  };
 }
