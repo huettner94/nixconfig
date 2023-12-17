@@ -17,4 +17,7 @@
         "dm-raid" # lvmraid
     ];
 
+    # Lets save power, not sure on the performance impact
+    powerManagement.cpuFreqGovernor = "powersave";
+
 }
