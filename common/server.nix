@@ -20,4 +20,12 @@
     # Lets save power, not sure on the performance impact
     powerManagement.cpuFreqGovernor = "powersave";
 
+    # To spinn down hdds after some time
+    environment.systemPackages = with pkgs; [
+        hdparm
+    ];
+    services.udev.extraRules = ''
+        ACTION=="add|change", KERNEL=="sd[a-z]", ATTRS{queue/rotational}=="1", RUN+="${pkgs.hdparm}/bin/hdparm -S 120 /dev/%k"
+    '';
+
 }
