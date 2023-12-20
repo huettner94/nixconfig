@@ -20,12 +20,18 @@
     # Lets save power, not sure on the performance impact
     powerManagement.cpuFreqGovernor = "powersave";
 
-    # To spinn down hdds after some time
+    # To manage hdd configs
     environment.systemPackages = with pkgs; [
         hdparm
     ];
+
+    # hdparm -S 120 : lets hdds spin down after 10 minutes
+    # med_power_with_dipm : lets the sata link to the disks power down
+    # power/control : lets the kernel do power management on pci devices
     services.udev.extraRules = ''
         ACTION=="add|change", KERNEL=="sd[a-z]", ATTRS{queue/rotational}=="1", RUN+="${pkgs.hdparm}/bin/hdparm -S 120 /dev/%k"
+        ACTION=="add", SUBSYSTEM=="scsi_host", KERNEL=="host*", ATTR{link_power_management_policy}="med_power_with_dipm"
+        ACTION=="add", SUBSYSTEM=="pci", ATTR{power/control}="auto"
     '';
 
 }
