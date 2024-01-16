@@ -6,6 +6,7 @@
         # require public key authentication for better security
         settings.PasswordAuthentication = false;
         settings.KbdInteractiveAuthentication = false;
+        forwardX11 = true;
         #settings.PermitRootLogin = "yes";
     };
 
