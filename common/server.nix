@@ -6,7 +6,7 @@
         # require public key authentication for better security
         settings.PasswordAuthentication = false;
         settings.KbdInteractiveAuthentication = false;
-        forwardX11 = true;
+        settings.X11Forwarding = true;
         #settings.PermitRootLogin = "yes";
     };
 
@@ -22,7 +22,7 @@
     powerManagement.cpuFreqGovernor = "powersave";
 
     environment.systemPackages = with pkgs; [
-        "xorg.xauth" # for x forwarding
+        xorg.xauth # for x forwarding
         hdparm # To manage hdd configs
     ];
 
