@@ -21,9 +21,9 @@
     # Lets save power, not sure on the performance impact
     powerManagement.cpuFreqGovernor = "powersave";
 
-    # To manage hdd configs
     environment.systemPackages = with pkgs; [
-        hdparm
+        "xorg.xauth" # for x forwarding
+        hdparm # To manage hdd configs
     ];
 
     # hdparm -S 120 : lets hdds spin down after 10 minutes
