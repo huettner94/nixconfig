@@ -16,6 +16,8 @@
 
     boot.initrd.kernelModules = [
         "dm-raid" # lvmraid
+        "dm-integrity" # lvmraid integrity
+        "dm-snapshot" # lvm snapshots
     ];
 
     # Lets save power, not sure on the performance impact
