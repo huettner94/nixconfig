@@ -29,10 +29,10 @@
         address = "192.168.0.14";
         prefixLength = 24;
       }];
-      "br-int".ipv4.addresses = [{
-        address = "192.168.0.13";
-        prefixLength = 24;
-      }];
+      #"br-int".ipv4.addresses = [{
+      #  address = "192.168.0.13";
+      #  prefixLength = 24;
+      #}];
     };
     defaultGateway = "192.168.0.1";
     nameservers = [ "192.168.0.1" ];
