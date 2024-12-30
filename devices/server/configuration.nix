@@ -20,6 +20,7 @@
 
   networking = {
     hostName = "serverle";
+    useDHCP = false;
     bridges = {
       "br-int" = { interfaces = [ "enp4s0" "enp5s0" "enp6s0" "enp7s0" ]; };
     };
@@ -28,7 +29,7 @@
         address = "192.168.0.14";
         prefixLength = 24;
       }];
-      br-int.ipv4.addresses = [{
+      "br-int".ipv4.addresses = [{
         address = "192.168.0.13";
         prefixLength = 24;
       }];
