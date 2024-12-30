@@ -20,6 +20,9 @@
 
   networking = {
     hostName = "serverle";
+    bridges = {
+      "br-int" = { interfaces = [ "enp4s0" "enp5s0" "enp6s0" "enp7s0" ]; };
+    };
     interfaces = {
       enp0s31f6.ipv4.addresses = [{
         address = "192.168.0.14";
