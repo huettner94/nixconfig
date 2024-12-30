@@ -26,9 +26,7 @@
 
   programs.zsh.enable = true;
 
-  users.users.huettner94 = {
-    shell = pkgs.zsh;
-  };
+  users.users.huettner94 = { shell = pkgs.zsh; };
 
   services = {
     # needed for store VSCode auth token 
