@@ -21,9 +21,7 @@
     };
   };
 
-  services.resolved = {
-    enable = false;
-  };
+  services.resolved = { enable = false; };
 
   networking = {
     hostName = "serverle";

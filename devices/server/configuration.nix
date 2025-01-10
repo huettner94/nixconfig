@@ -4,6 +4,7 @@
   imports = [
     ./hardware-configuration.nix
     ./network.nix
+    ./print.nix
     ../../common/configuration.nix
     ../../common/router.nix
     ../../common/server.nix
