@@ -21,6 +21,10 @@
     };
   };
 
+  services.resolved = {
+    enable = false;
+  };
+
   networking = {
     hostName = "serverle";
     useDHCP = false;
