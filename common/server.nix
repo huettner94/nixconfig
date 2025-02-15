@@ -28,6 +28,12 @@
     hdparm # To manage hdd configs
   ];
 
+  # Increase max inotifies as limit is quite low otherwise.
+  boot.kernel.sysctl = {
+    "fs.inotify.max_user_instances" = 1024;
+    "fs.inotify.max_user_watches" = 16384;
+  };
+
   # hdparm -S 120 : lets hdds spin down after 10 minutes
   # med_power_with_dipm : lets the sata link to the disks power down
   # power/control : lets the kernel do power management on pci devices (next line for sata ports and the next for their devices)
