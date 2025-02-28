@@ -11,6 +11,9 @@
       cache-size = 10000;
       domain = "int.eurador.de";
 
+      # run dns resolving on 8053, so that adguard can forward there
+      port = 8053;
+
       # the default gateway and dns server
       dhcp-option = [ "3,192.168.0.1" "6,192.168.0.1" ];
 
@@ -19,6 +22,12 @@
       # APSystems ECU-B (balkonkraftwerk)
       dhcp-host = "b4:8a:0a:ee:91:16,192.168.0.31";
     };
+  };
+
+  services.adguardhome = {
+    enable = true;
+    host = "192.168.0.1";
+    port = "3000";
   };
 
   services.resolved = { enable = false; };
