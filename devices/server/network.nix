@@ -11,8 +11,8 @@
       cache-size = 10000;
       domain = "int.eurador.de";
 
-      # run dns resolving on 8053, so that adguard can forward there
-      port = 8053;
+      # disable dns, as that is done by adguard.
+      port = 0;
 
       # the default gateway and dns server
       dhcp-option = [ "3,192.168.0.1" "6,192.168.0.1" ];
