@@ -8,6 +8,7 @@
     allowFrom = [ "all" ];
     browsing = true;
     defaultShared = true;
+    startWhenNeeded = false;
   };
 
   services.avahi = {
