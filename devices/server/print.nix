@@ -10,6 +10,11 @@
     defaultShared = true;
     startWhenNeeded = false;
   };
+  /* Wait for nics to be up, before starting cups */
+  systemd.services.cups = {
+    wants = [ "network-online.target" ];
+    after = [ "network-online.target" ];
+  };
 
   services.avahi = {
     enable = true;
