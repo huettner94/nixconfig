@@ -37,6 +37,7 @@
     useDHCP = false;
     nat.enable = false;
     firewall.enable = false;
+    networkmanager.enable = false;
     nftables = {
       enable = true;
       ruleset = ''
