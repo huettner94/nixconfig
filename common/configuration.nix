@@ -1,11 +1,12 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.networkmanager.enable = true;
+  # Generally we use network manager, but in some cases not
+  networking.networkmanager.enable = lib.mkDefault true;
 
   time.timeZone = "Europe/Berlin";
 
