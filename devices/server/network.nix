@@ -161,8 +161,8 @@
           DHCPServer = "yes";
         };
         dhcpServerConfig = {
-          PoolOffset = "40";
-          PoolSize = "160";
+          PoolOffset = 40;
+          PoolSize = 160;
           EmitDNS = "yes";
           DNS = "192.168.0.1";
           EmitRouter = "yes";
