@@ -38,7 +38,7 @@
 
             # deny access from outside (connections are already allowed)
             iifname "enp0s31f6" counter drop
-            iffname "ppp0" counter drop
+            iifname "ppp0" counter drop
             iifname "dgn-aftr" counter drop
           }
 
