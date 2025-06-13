@@ -217,7 +217,7 @@
 
   # PPPoE for DGN
   services.pppd = {
-    enabled = true;
+    enable = true;
     peers = {
       dgn = {
         autostart = true;
