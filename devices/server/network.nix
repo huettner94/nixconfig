@@ -138,6 +138,7 @@
           VLAN = "dgn-vl7";
           DHCP = "no";
         };
+        linkConfig.RequiredForOnline = "no";
       };
 
       # fritzbox upstream
