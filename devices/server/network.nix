@@ -158,14 +158,14 @@
           IPv6AcceptRA = "yes";
           IPv6SendRA = "yes";
           DHCPPrefixDelegation = "yes";
-          DHCPServer = "true";
+          DHCPServer = "yes";
         };
         dhcpServerConfig = {
           PoolOffset = "40";
           PoolSize = "160";
-          EmitDNS = "true";
+          EmitDNS = "yes";
           DNS = "192.168.0.1";
-          EmitRouter = "true";
+          EmitRouter = "yes";
           Router = "192.168.0.1";
         };
         dhcpServerStaticLeases = [
@@ -175,7 +175,7 @@
           }
         ];
         ipv6SendRAConfig = {
-          EmitDNS = "true";
+          EmitDNS = "yes";
           DNS = "fe80::1";
         };
       };
