@@ -223,7 +223,7 @@
         autostart = true;
         enable = true;
         config = ''
-          plugin rp-pppoe.so dgn-vl7
+          plugin pppoe.so dgn-vl7
           
           # pppd supports multiple ways of entering credentials,
           # this is just 1 way
