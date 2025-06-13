@@ -236,7 +236,6 @@
           hide-password
           lcp-echo-interval 20
           lcp-echo-failure 3
-          connect /bin/true
           noauth
           persist
           noaccomp
