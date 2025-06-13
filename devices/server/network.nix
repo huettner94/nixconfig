@@ -145,7 +145,7 @@
         matchConfig.Name = "enp0s31f6";
         address = [ "192.168.10.10/24" ];
         gateway = [ "192.168.10.1" ];
-        linkConfig.RequiredForOnline = "routable";
+        linkConfig.RequiredForOnline = "no";
       };
 
       # internal
@@ -186,6 +186,7 @@
           Name = "ppp0";
           Type = "ppp";
         };
+        linkConfig.RequiredForOnline = "no";
         networkConfig = {
           DHCP = "ipv6";
           IPv6AcceptRA = "yes";
@@ -203,6 +204,7 @@
         matchConfig = {
           Name = "dgn-aftr";
         };
+        linkConfig.RequiredForOnline = "no";
         addresses = [
           {
             Address = "192.0.0.2/29";
@@ -210,7 +212,6 @@
           }
         ];
         #gateway = [ "192.0.0.1" ];
-        #linkConfig.RequiredForOnline = "routable";
       };
     };
   };
