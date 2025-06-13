@@ -193,7 +193,7 @@
           KeepConfiguration = "yes";
         };
         dhcpV6Config = {
-          UseDelegatedPrefix = "true";
+          UseDelegatedPrefix = "yes";
           WithoutRA = "solicit";
         };
       };
