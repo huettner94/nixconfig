@@ -12,6 +12,7 @@
 
   users.users."huettner94".openssh.authorizedKeys.keys = [
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBPUsGGyHPV3taUC7fc92vKKJmBLL8tcMAfN6NZkQf3g"
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPr5zx/qNbUHWCRtYHge+6ZjrK2kb9REDzGdOpwgb0lN"
   ];
 
   boot.initrd.kernelModules = [
